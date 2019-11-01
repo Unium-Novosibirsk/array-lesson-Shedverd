@@ -12,8 +12,8 @@ namespace ArrayLesson
         {
             int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             Array array = new Array(arr);
+            Console.WriteLine(array.Max);
             Console.ReadKey();
-            
         }
     }
 }
