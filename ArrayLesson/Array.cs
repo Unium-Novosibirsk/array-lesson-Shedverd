@@ -64,7 +64,7 @@ namespace ArrayLesson
         {
             foreach (int el in _array)
             {
-                Console.Write(el + " ");
+                Console.Write(el + "Max");
             }
         }
         public int Find(int val)
@@ -87,8 +87,25 @@ namespace ArrayLesson
                     return true;
                 }
             }
-
             return false;
+        }
+
+        public int BubbleSort()
+        {
+            int sort=_array.Length;
+            for (int i = 0; i < _array.Length - 1; i++)
+            {
+                for (int j = i + 1; j < _array.Length; j++)
+                {
+                    if (_array[i] > _array[j])
+                    {
+                        sort = _array[i];
+                        _array[i] = _array[j];
+                        _array[j] = sort;
+                    }
+                }
+            }
+            return sort;
         }
     }
 }
