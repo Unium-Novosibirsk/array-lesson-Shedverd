@@ -14,7 +14,7 @@ namespace ArrayLesson
             {
                 int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
                 Array array = new Array(arr);
-                Console.WriteLine(array.GetElementByIndex());
+                Console.WriteLine(array.GetElementByIndex(1));
             }
             catch (IndexOutOfRangeException ex)
             {
