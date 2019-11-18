@@ -22,5 +22,11 @@ namespace ArrayLesson
             for (int i = 0; i < array.Length; i++)
                 _array[i] = array[i];
         }
+        public int GetElementByIndex(int index)
+        {
+            if (index < 0 || index >= _array.Length)
+                throw new IndexOutOfRangeException();
+            return _array[index];
+        }
     }
 }
