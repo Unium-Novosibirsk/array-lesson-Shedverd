@@ -42,6 +42,34 @@ namespace ArrayLesson
                 Console.WriteLine("\n");
                 Console.WriteLine(ex.StackTrace);
             }
+            try
+            {
+                Console.Write("Введите индекс эллемента ");
+                int Index = int.Parse(Console.ReadLine());
+                Console.Write("Введите значение эллемента ");
+                int SetInt = int.Parse(Console.ReadLine());
+                arr[Index] = SetInt;
+                array.Print();
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                Console.WriteLine("Не расстраивайся, это всего лишь IndexOutOfRangeExcaption");
+                Console.WriteLine("\n");
+                Console.WriteLine(ex.StackTrace);
+            }
+            try
+            {
+                Console.Write("Введите индекс: ");
+                int a = int.Parse(Console.ReadLine());
+                Console.Write("Ваш эллемент массива: ");
+                Console.Write(arr[a]);
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                Console.WriteLine("Не расстраивайся, это всего лишь IndexOutOfRangeExcaption");
+                Console.WriteLine("\n");
+                Console.WriteLine(ex.StackTrace);
+            }
             Console.ReadKey();
         }
     }

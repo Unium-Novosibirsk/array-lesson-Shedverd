@@ -39,5 +39,16 @@ namespace ArrayLesson
             foreach (int el in _array)
                 Console.Write(el+" ");
         }
+        public int this [int index]
+        {
+            get
+            {
+                return GetElementByIndex(index);
+            }
+            set
+            {
+                SetElementByIndex(index, value);
+            }
+        }
     }
 }
