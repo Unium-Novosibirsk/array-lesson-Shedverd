@@ -10,102 +10,95 @@ namespace ArrayLesson
     {
         private int[] _array;
         public int Length { get; private set; }
+
         public Array()
         {
             Length = 0;
             _array = new int[0];
         }
-        public Array(int [] array)
+
+        public Array(int[] array)
         {
             Length = array.Length;
             _array = new int[array.Length];
             for (int i = 0; i < array.Length; i++)
                 _array[i] = array[i];
         }
+
         public int Summ()
         {
             int s = 0;
             foreach (int el in _array)
-            {
                 s += el;
-
-            }
             return s;
         }
+
         public int Mult()
         {
             int p = 1;
             foreach (int el in _array)
-            {
                 p = el;
-            }
 
             return p;
         }
+
         public int Max()
         {
             int max = _array[0];
             foreach (int el in _array)
-            {
                 max = el > max ? el : max;
-            }
             return max;
         }
+
         public int Min()
         {
             int min = _array[0];
             foreach (int el in _array)
-            {
                 min = el < min ? el : min;
-            }
             return min;
         }
-        public void Print()
-        {
-            foreach (int el in _array)
-            {
-                Console.Write(el + "Max");
-            }
-        }
+
         public int Find(int val)
         {
             for (int i = 0; i < _array.Length; i++)
             {
                 if (_array[i] == val)
-                {
                     return i;
-                }
             }
+
             return -1;
         }
+
         public bool HasValue(int val)
         {
             foreach (int el in _array)
             {
                 if (el == val)
-                {
                     return true;
-                }
             }
+
             return false;
         }
 
-        public int BubbleSort()
+        public int GetElementByIndex(int index)
         {
-            int sort=_array.Length;
-            for (int i = 0; i < _array.Length - 1; i++)
-            {
-                for (int j = i + 1; j < _array.Length; j++)
-                {
-                    if (_array[i] > _array[j])
-                    {
-                        sort = _array[i];
-                        _array[i] = _array[j];
-                        _array[j] = sort;
-                    }
-                }
-            }
-            return sort;
+            int myGetIlement = _array[index];
+            if (myGetIlement > _array[index] || myGetIlement == 0)
+                throw new IndexOutOfRangeException();
+            return myGetIlement;
         }
+
+ //       public int SetElement (int a, int b)
+ //       {
+ //           string arr;
+ //           int Size = _array.Length - 1;
+ //           for (int i = Size - 1; a <= i; i -= 1)
+ //               _array[i + 1] = _array[i];
+ //           _array[a] = b;
+ //           for (int i = 0; i < _array.Length; i++)
+ //           {
+//                Console.Write(_array[i]);
+//            }
+ //       }
     }
 }

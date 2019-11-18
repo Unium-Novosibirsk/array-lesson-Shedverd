@@ -11,20 +11,46 @@ namespace ArrayLesson
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите числа через пробел");
+            Console.Write("Введите элементы массива через пробел: ");
             int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             Array array = new Array(arr);
-            Console.WriteLine("Сумма этих чисел раывна:");
-            Console.WriteLine(array.Summ());
-            Console.WriteLine("Произведение этих чисел равно:");
-            Console.WriteLine(array.Mult());
-            Console.WriteLine("Максимальное число равно:");
-            Console.WriteLine(array.Max());
-            Console.WriteLine("Минимальное число равно:");
-            Console.WriteLine(array.Min());
-            Console.WriteLine("Сортировка пузырьком:");
-            Console.WriteLine(array.BubbleSort());
-            Console.ReadKey();
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.Write("Сумма эллементов массива равна: ");
+            Console.Write(array.Summ());
+            Console.WriteLine(" ");
+            Console.Write("Произведение эллементов массива равно: ");
+            Console.Write(array.Mult());
+            Console.WriteLine(" ");
+            Console.Write("Минимальный эллемент массива равен: ");
+            Console.Write(array.Max());
+            Console.WriteLine(" ");
+            Console.Write("Минимальный эллемент массива равен: ");
+            Console.Write(array.Min());
+            Console.WriteLine(" ");
+            Console.Write("Сортировка эллементов пузырьковым методом: ");
+            Console.WriteLine();
+            Console.WriteLine("Получение эллемента масиива по индексу: ");
+            try
+            {
+                
+                Console.Write("Введите индекс: ");
+                int a = int.Parse(Console.ReadLine());
+                Console.WriteLine("Ваш элемент: " + array.GetElementByIndex(a));
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                Console.WriteLine("Не расстраивайся, это всего лишь IndexOutOfRangeExcaption");
+                Console.WriteLine("\n");
+                Console.WriteLine(ex.StackTrace);
+            }
+ //           Console.WriteLine("Вставка эллемента массива по индексу:");
+ //           Console.Write("Индекс, позиция вставки: ");
+ //           int inta = int.Parse(Console.ReadLine());
+ //           Console.Write("Значение элемента вставки: ");
+ //           int intb = int.Parse(Console.ReadLine());
+ //           Console.WriteLine("Ваш массив" + array.SetElement(inta, intb));
+ //           Console.ReadKey();
         }
     }
 }
