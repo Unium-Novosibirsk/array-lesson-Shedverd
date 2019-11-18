@@ -24,10 +24,9 @@ namespace ArrayLesson
         }
         public int GetElementByIndex(int index)
         {
-            int myGetIlement = _array[index];
-            if (myGetIlement > _array[index] || myGetIlement == 0)
+            if (index < 0 || index >= _array.Length)
                 throw new IndexOutOfRangeException();
-            return myGetIlement;
+            return _array[index];
         }
     }
 }
