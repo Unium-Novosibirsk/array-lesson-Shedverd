@@ -15,7 +15,7 @@ namespace ArrayLesson
             Length = 0;
             _array = new int[0];
         }
-        public Array(int [] array)
+        public Array(int[] array)
         {
             Length = array.Length;
             _array = new int[array.Length];
@@ -27,6 +27,17 @@ namespace ArrayLesson
             if (index < 0 || index >= _array.Length)
                 throw new IndexOutOfRangeException();
             return _array[index];
+        }
+        public void SetElementByIndex(int index, int value)
+        {
+            if (index < 0 || index >= _array.Length)
+                throw new IndexOutOfRangeException();
+            _array[index] = value;
+        }
+        public void Print()
+        {
+            foreach (int el in _array)
+                Console.Write(el+" ");
         }
     }
 }
