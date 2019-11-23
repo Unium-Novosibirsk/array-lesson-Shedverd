@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,12 +30,14 @@ namespace ArrayLesson
             }
             try
             {
-                Console.Write("Введите индекс эллемента ");
+                Console.Write("Введите индекс эллемента: ");
                 int Index = int.Parse(Console.ReadLine());
-                Console.Write("Введите значение эллемента ");
+                Console.Write("Введите значение эллемента: ");
                 int SetInt = int.Parse(Console.ReadLine());
                 array.SetElementByIndex(Index, SetInt);
+                Console.WriteLine("Ваш массив: ");
                 array.Print();
+                Console.WriteLine(" ");
             }
             catch(IndexOutOfRangeException ex)
             {
@@ -44,12 +47,14 @@ namespace ArrayLesson
             }
             try
             {
-                Console.Write("Введите индекс эллемента ");
+                Console.Write("Введите индекс эллемента: ");
                 int Index = int.Parse(Console.ReadLine());
-                Console.Write("Введите значение эллемента ");
+                Console.Write("Введите значение эллемента: ");
                 int SetInt = int.Parse(Console.ReadLine());
                 arr[Index] = SetInt;
+                Console.WriteLine("Ваш массив: ");
                 array.Print();
+                Console.WriteLine(" ");
             }
             catch (IndexOutOfRangeException ex)
             {
@@ -62,7 +67,7 @@ namespace ArrayLesson
                 Console.Write("Введите индекс: ");
                 int a = int.Parse(Console.ReadLine());
                 Console.Write("Ваш эллемент массива: ");
-                Console.Write(arr[a]);
+                Console.WriteLine(arr[a]);
             }
             catch (IndexOutOfRangeException ex)
             {
@@ -70,6 +75,9 @@ namespace ArrayLesson
                 Console.WriteLine("\n");
                 Console.WriteLine(ex.StackTrace);
             }
+            Console.Write("Сортировка пузырьком: ");
+            array.BubleSort();
+            array.Print();
             Console.ReadKey();
         }
     }
