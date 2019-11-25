@@ -109,5 +109,18 @@ namespace ArrayLesson
                 _array[location + 1] = newElement;
             }
         }
+        public void DeleteElementByIndex(int Index)
+        {
+            if (Index < 0 || Index > _array.Length - 1)
+                throw new IndexOutOfRangeException();
+            else
+            {
+                _array[Index] -= 1;
+                for (int i=0; i<_array.Length-1; i++)
+                {
+
+                }
+            }
+        }
     }
 }

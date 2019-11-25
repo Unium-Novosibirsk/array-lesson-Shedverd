@@ -33,17 +33,11 @@ namespace ArrayLesson
             Console.WriteLine("Получение эллемента масиива по индексу: ");
             try
             {
-                
-                Console.Write("Введите индекс: ");
+
+                Console.WriteLine("Введите индекс: ");
                 int a = int.Parse(Console.ReadLine());
                 Console.WriteLine("Ваш элемент: " + array.GetElementByIndex(a));
-            Console.WriteLine("\n");
-            try
-            {
-                Console.Write("Введите индекс: ");
-                int a = int.Parse(Console.ReadLine());
-                Console.Write("Ваш эллемент массива: ");
-                Console.WriteLine(array.GetElementByIndex(a));
+                Console.WriteLine("\n");
             }
             catch (IndexOutOfRangeException ex)
             {
@@ -100,6 +94,12 @@ namespace ArrayLesson
             }
             Console.Write("Сортировка вставками: ");
             array.InsertSort();
+            array.Print();
+            Console.WriteLine(" ");
+            Console.Write("Введите идекс, который хотите удалить: ");
+            int index = int.Parse(Console.ReadLine());
+            array.DeleteElementByIndex(index);
+            Console.Write("Ваш массив: ");
             array.Print();
             Console.ReadKey();
         }
