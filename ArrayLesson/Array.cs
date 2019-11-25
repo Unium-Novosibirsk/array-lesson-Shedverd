@@ -37,11 +37,9 @@ namespace ArrayLesson
         {
             int p = 1;
             foreach (int el in _array)
-                p = el;
-
+                p *= el;
             return p;
         }
-
         public int Max()
         {
             int max = _array[0];
@@ -76,29 +74,7 @@ namespace ArrayLesson
                 if (el == val)
                     return true;
             }
-
             return false;
         }
-
-        public int GetElementByIndex(int index)
-        {
-            int myGetIlement = _array[index];
-            if (myGetIlement > _array[index] || myGetIlement == 0)
-                throw new IndexOutOfRangeException();
-            return myGetIlement;
-        }
-
- //       public int SetElement (int a, int b)
- //       {
- //           string arr;
- //           int Size = _array.Length - 1;
- //           for (int i = Size - 1; a <= i; i -= 1)
- //               _array[i + 1] = _array[i];
- //           _array[a] = b;
- //           for (int i = 0; i < _array.Length; i++)
- //           {
-//                Console.Write(_array[i]);
-//            }
- //       }
     }
 }

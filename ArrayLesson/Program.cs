@@ -44,13 +44,6 @@ namespace ArrayLesson
                 Console.WriteLine("\n");
                 Console.WriteLine(ex.StackTrace);
             }
- //           Console.WriteLine("Вставка эллемента массива по индексу:");
- //           Console.Write("Индекс, позиция вставки: ");
- //           int inta = int.Parse(Console.ReadLine());
- //           Console.Write("Значение элемента вставки: ");
- //           int intb = int.Parse(Console.ReadLine());
- //           Console.WriteLine("Ваш массив" + array.SetElement(inta, intb));
- //           Console.ReadKey();
         }
     }
 }
