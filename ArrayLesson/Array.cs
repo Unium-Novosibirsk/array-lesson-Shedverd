@@ -50,5 +50,21 @@ namespace ArrayLesson
                 SetElementByIndex(index, value);
             }
         }
+        public void InsertSort()
+        {
+            int newElement;
+            int location;
+            for (int i = 1; i < _array.Length; i++)
+            {
+                newElement = _array[i];
+                location = i - 1;
+                while (location >= 0 && _array[location] > newElement)
+                {
+                    _array[location + 1] = _array[location];
+                    location = location - 1;
+                }
+                _array[location + 1] = newElement;
+            }
+        }
     }
 }
