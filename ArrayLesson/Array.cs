@@ -109,5 +109,25 @@ namespace ArrayLesson
                 _array[location + 1] = newElement;
             }
         }
+        public void SelectionSort()
+        {
+            int min, temp;
+            int length = _array.Length;
+            for (int i = 0; i < length - 1; i++)
+            {        
+                min = i;
+                for (int j = i + 1; j < length; j++)
+                {
+                    if (_array[j] < _array[min])
+                        min = j;
+                }
+                if (min != i)
+                {
+                    temp = _array[i];
+                    _array[i] = _array[min];
+                    _array[min] = temp;
+                }
+            }
+        }
     }
 }

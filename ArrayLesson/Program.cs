@@ -31,77 +31,75 @@ namespace ArrayLesson
             Console.Write("Сортировка эллементов пузырьковым методом: ");
             Console.WriteLine();
             Console.WriteLine("Получение эллемента масиива по индексу: ");
-            try
-            {
-                
                 Console.Write("Введите индекс: ");
                 int a = int.Parse(Console.ReadLine());
                 Console.WriteLine("Ваш элемент: " + array.GetElementByIndex(a));
-            Console.WriteLine("\n");
-            try
-            {
-                Console.Write("Введите индекс: ");
-                int a = int.Parse(Console.ReadLine());
-                Console.Write("Ваш эллемент массива: ");
-                Console.WriteLine(array.GetElementByIndex(a));
-            }
-            catch (IndexOutOfRangeException ex)
-            {
-                Console.WriteLine("Не расстраивайся, это всего лишь IndexOutOfRangeExcaption");
                 Console.WriteLine("\n");
-                Console.WriteLine(ex.StackTrace);
-            }
-            try
-            {
-                Console.Write("Введите индекс эллемента: ");
-                int Index = int.Parse(Console.ReadLine());
-                Console.Write("Введите значение эллемента: ");
-                int SetInt = int.Parse(Console.ReadLine());
-                array.SetElementByIndex(Index, SetInt);
-                Console.WriteLine("Ваш массив: ");
+                try
+                {
+                    Console.Write("Введите индекс: ");
+                    int b = int.Parse(Console.ReadLine());
+                    Console.Write("Ваш эллемент массива: ");
+                    Console.WriteLine(array.GetElementByIndex(b));
+                }
+                catch (IndexOutOfRangeException ex)
+                {
+                    Console.WriteLine("Не расстраивайся, это всего лишь IndexOutOfRangeExcaption");
+                    Console.WriteLine("\n");
+                    Console.WriteLine(ex.StackTrace);
+                }
+                try
+                {
+                    Console.Write("Введите индекс эллемента: ");
+                    int Index = int.Parse(Console.ReadLine());
+                    Console.Write("Введите значение эллемента: ");
+                    int SetInt = int.Parse(Console.ReadLine());
+                    array.SetElementByIndex(Index, SetInt);
+                    Console.WriteLine("Ваш массив: ");
+                    array.Print();
+                    Console.WriteLine(" ");
+                }
+                catch (IndexOutOfRangeException ex)
+                {
+                    Console.WriteLine("Не расстраивайся, это всего лишь IndexOutOfRangeExcaption");
+                    Console.WriteLine("\n");
+                    Console.WriteLine(ex.StackTrace);
+                }
+                try
+                {
+                    Console.Write("Введите индекс эллемента: ");
+                    int Index = int.Parse(Console.ReadLine());
+                    Console.Write("Введите значение эллемента: ");
+                    int SetInt = int.Parse(Console.ReadLine());
+                    arr[Index] = SetInt;
+                    Console.WriteLine("Ваш массив: ");
+                    array.Print();
+                    Console.WriteLine(" ");
+                }
+                catch (IndexOutOfRangeException ex)
+                {
+                    Console.WriteLine("Не расстраивайся, это всего лишь IndexOutOfRangeExcaption");
+                    Console.WriteLine("\n");
+                    Console.WriteLine(ex.StackTrace);
+                }
+                try
+                {
+                    Console.Write("Введите индекс: ");
+                    int f = int.Parse(Console.ReadLine());
+                    Console.Write("Ваш эллемент массива: ");
+                    Console.WriteLine(arr[f]);
+                }
+                catch (IndexOutOfRangeException ex)
+                {
+                    Console.WriteLine("Не расстраивайся, это всего лишь IndexOutOfRangeExcaption");
+                    Console.WriteLine("\n");
+                    Console.WriteLine(ex.StackTrace);
+                }
+                Console.Write("Сортировка выбором: ");
+                array.SelectionSort();
                 array.Print();
-                Console.WriteLine(" ");
-            }
-            catch (IndexOutOfRangeException ex)
-            {
-                Console.WriteLine("Не расстраивайся, это всего лишь IndexOutOfRangeExcaption");
-                Console.WriteLine("\n");
-                Console.WriteLine(ex.StackTrace);
-            }
-            try
-            {
-                Console.Write("Введите индекс эллемента: ");
-                int Index = int.Parse(Console.ReadLine());
-                Console.Write("Введите значение эллемента: ");
-                int SetInt = int.Parse(Console.ReadLine());
-                arr[Index] = SetInt;
-                Console.WriteLine("Ваш массив: ");
-                array.Print();
-                Console.WriteLine(" ");
-            }
-            catch (IndexOutOfRangeException ex)
-            {
-                Console.WriteLine("Не расстраивайся, это всего лишь IndexOutOfRangeExcaption");
-                Console.WriteLine("\n");
-                Console.WriteLine(ex.StackTrace);
-            }
-            try
-            {
-                Console.Write("Введите индекс: ");
-                int a = int.Parse(Console.ReadLine());
-                Console.Write("Ваш эллемент массива: ");
-                Console.WriteLine(arr[a]);
-            }
-            catch (IndexOutOfRangeException ex)
-            {
-                Console.WriteLine("Не расстраивайся, это всего лишь IndexOutOfRangeExcaption");
-                Console.WriteLine("\n");
-                Console.WriteLine(ex.StackTrace);
-            }
-            Console.Write("Сортировка вставками: ");
-            array.InsertSort();
-            array.Print();
-            Console.ReadKey();
+                Console.ReadKey();
+            
         }
     }
 }
