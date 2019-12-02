@@ -54,17 +54,13 @@ namespace ArrayLesson
         {
             int temp;
             for (int i = 0; i < _array.Length; i++)
-            {
-                for (int j = i + 1; j < _array.Length; j++)
-                {
+                for (int j= i+1; j < _array.Length; j++)
                     if (_array[i] > _array[j])
                     {
                         temp = _array[i];
                         _array[i] = _array[j];
                         _array[j] = temp;
                     }
-                }
-            }
         }
     }
 }
