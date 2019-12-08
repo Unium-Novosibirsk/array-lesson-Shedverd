@@ -49,18 +49,19 @@ namespace ArrayLesson
             {
                 SetElementByIndex(index, value);
             }
-        }
-        public void BubleSort()
+        } 
+        public void Swap(ref int i,ref int j)
         {
-            int temp;
+                int temp = i;
+                i = j;
+                j = temp;
+        }
+        public void BubbleSort()
+        {
             for (int i = 0; i < _array.Length; i++)
-                for (int j= i+1; j < _array.Length; j++)
-                    if (_array[i] > _array[j])
-                    {
-                        temp = _array[i];
-                        _array[i] = _array[j];
-                        _array[j] = temp;
-                    }
+               for (int j = i + 1; j < _array.Length - 1; j++)
+                  if (_array[j] > _array[j + 1])
+                     Swap(ref _array[j],ref _array[j + 1]);
         }
     }
 }

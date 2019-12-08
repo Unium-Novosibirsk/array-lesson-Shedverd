@@ -76,7 +76,7 @@ namespace ArrayLesson
                 Console.WriteLine(ex.StackTrace);
             }
             Console.Write("Сортировка пузырьком: ");
-            array.BubleSort();
+            array.BubbleSort();
             array.Print();
             Console.ReadKey();
         }
