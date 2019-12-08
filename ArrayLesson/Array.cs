@@ -109,17 +109,17 @@ namespace ArrayLesson
                 _array[location + 1] = newElement;
             }
         }
-        public void DeleteElementByIndex(int Index)
+        public void DeleteElementByIndex(int index)
         {
-            if (Index < 0 || Index > _array.Length - 1)
+            if (index < 0 || index > _array.Length - 1)
                 throw new IndexOutOfRangeException();
-            else
+            int[] newArray = new int[_array.Length - 1];
+            for (int i = 0; i < _array.Length; i++)
             {
-                _array[Index] -= 1;
-                for (int i=0; i<_array.Length-1; i++)
-                {
-
-                }
+                if (i < index)
+                    newArray[i] = _array[i];
+                else if (i > index)
+                    newArray[i - 1] = _array[i];
             }
         }
     }

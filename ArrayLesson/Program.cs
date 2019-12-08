@@ -98,8 +98,8 @@ namespace ArrayLesson
             Console.WriteLine(" ");
             Console.Write("Введите идекс, который хотите удалить: ");
             int index = int.Parse(Console.ReadLine());
-            array.DeleteElementByIndex(index);
             Console.Write("Ваш массив: ");
+            array.DeleteElementByIndex(index);
             array.Print();
             Console.ReadKey();
         }
