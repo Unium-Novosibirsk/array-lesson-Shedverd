@@ -157,6 +157,14 @@ namespace ArrayLesson
                 }
             }
         }
+        public void InsertElement(int Element)
+        {
+            int ins = 1;
+            int size = _array.Length - 1;
+            for (int i=size-1; ins<=i; i-=1)
+                _array[i + 1] = _array[i];
+            _array[ins] = Element;
+        }
     }
 }
 

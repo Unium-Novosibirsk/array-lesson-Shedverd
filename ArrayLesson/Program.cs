@@ -14,7 +14,6 @@ namespace ArrayLesson
             Console.Write("Введите элементы массива через пробел: ");
             int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             Array array = new Array(arr);
-
             Console.WriteLine(" ");
             Console.WriteLine(" ");
             Console.Write("Сумма эллементов массива равна: ");
@@ -36,8 +35,8 @@ namespace ArrayLesson
             {
 
                 Console.WriteLine("Введите индекс: ");
-                int a = int.Parse(Console.ReadLine());
-                Console.WriteLine("Ваш элемент: " + array.GetElementByIndex(a));
+                int c = int.Parse(Console.ReadLine());
+                Console.WriteLine("Ваш элемент: " + array.GetElementByIndex(c));
                 Console.WriteLine("\n");
             }
             catch (IndexOutOfRangeException ex)
@@ -79,7 +78,7 @@ namespace ArrayLesson
             {
                 Console.WriteLine("Не расстраивайся, это всего лишь IndexOutOfRangeExcaption");
                 Console.WriteLine("\n");
-                Console.WriteLine(ex.StackTrace)
+                Console.WriteLine(ex.StackTrace);
             }
                 Console.Write("Введите индекс: ");
                 int a = int.Parse(Console.ReadLine());
@@ -152,9 +151,9 @@ namespace ArrayLesson
             try
             {
                 Console.Write("Введите индекс: ");
-                int a = int.Parse(Console.ReadLine());
+                int b = int.Parse(Console.ReadLine());
                 Console.Write("Ваш эллемент массива: ");
-                Console.WriteLine(arr[a]);
+                Console.WriteLine(arr[b]);
             }
             catch (IndexOutOfRangeException ex)
             {
@@ -170,8 +169,12 @@ namespace ArrayLesson
             Console.WriteLine(" ");
             Console.Write("Введите идекс, который хотите удалить: ");
             int index = int.Parse(Console.ReadLine());
-            Console.Write("Ваш массив: ");
+            Console.WriteLine("Ваш массив: ");
             array.DeleteElementByIndex(index);
+            array.Print();
+            Console.WriteLine("Введите элемент, который хотите добавить");
+            int Element = int.Parse(Console.ReadLine());
+            array.InsertElement(Element);
             array.Print();
             Console.ReadKey();
         }
