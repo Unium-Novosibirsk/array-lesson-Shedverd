@@ -58,10 +58,10 @@ namespace ArrayLesson
         }
         public void BubbleSort()
         {
-            for (int i = 0; i < _array.Length; i++)
-               for (int j = i + 1; j < _array.Length - 1; j++)
-                  if (_array[j] > _array[j + 1])
-                     Swap(ref _array[j],ref _array[j + 1]);
+            for (int i = 1; i < _array.Length; i++)
+               for (int j = _array.Length-1; j >0; j--)
+                  if (_array[j-1] > _array[j])
+                     Swap(ref _array[j-1],ref _array[j]);
         }
     }
 }
