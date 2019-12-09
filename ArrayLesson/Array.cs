@@ -109,6 +109,21 @@ namespace ArrayLesson
                 _array[location + 1] = newElement;
             }
         }
+
+        public void DeleteElementByIndex(int index)
+        {
+            if (index < 0 || index > _array.Length - 1)
+                throw new IndexOutOfRangeException();
+            int[] newArray = new int[_array.Length - 1];
+            for (int i = 0; i < _array.Length; i++)
+            {
+                if (i < index)
+                    newArray[i] = _array[i];
+                else if (i > index)
+                    newArray[i - 1] = _array[i];
+            }
+        }
+
         public void SelectionSort()
         {
             int min, temp;
