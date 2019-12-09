@@ -109,6 +109,7 @@ namespace ArrayLesson
                 _array[location + 1] = newElement;
             }
         }
+
         public void DeleteElementByIndex(int index)
         {
             if (index < 0 || index > _array.Length - 1)
@@ -120,6 +121,27 @@ namespace ArrayLesson
                     newArray[i] = _array[i];
                 else if (i > index)
                     newArray[i - 1] = _array[i];
+            }
+        }
+
+        public void SelectionSort()
+        {
+            int min, temp;
+            int length = _array.Length;
+            for (int i = 0; i < length - 1; i++)
+            {        
+                min = i;
+                for (int j = i + 1; j < length; j++)
+                {
+                    if (_array[j] < _array[min])
+                        min = j;
+                }
+                if (min != i)
+                {
+                    temp = _array[i];
+                    _array[i] = _array[min];
+                    _array[min] = temp;
+                }
             }
         }
     }
