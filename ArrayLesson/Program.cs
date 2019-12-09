@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -55,6 +56,24 @@ namespace ArrayLesson
                 Console.WriteLine("Ваш массив: ");
                 array.Print();
                 Console.WriteLine(" ");
+            }
+            catch(IndexOutOfRangeException ex)
+            {
+                Console.WriteLine("Не расстраивайся, это всего лишь IndexOutOfRangeExcaption");
+                Console.WriteLine("\n");
+                Console.WriteLine(ex.StackTrace);
+            }
+            try
+            {
+                Console.Write("Введите индекс эллемента: ");
+                int Index = int.Parse(Console.ReadLine());
+                Console.Write("Введите значение эллемента: ");
+                int SetInt = int.Parse(Console.ReadLine());
+                arr[Index] = SetInt;
+                Console.WriteLine("Ваш массив: ");
+                array.Print();
+                Console.WriteLine(" ");
+
             }
             catch (IndexOutOfRangeException ex)
             {
@@ -143,6 +162,8 @@ namespace ArrayLesson
                 Console.WriteLine("\n");
                 Console.WriteLine(ex.StackTrace);
             }
+            Console.Write("Сортировка пузырьком: ");
+            array.BubbleSort();
             Console.Write("Сортировка вставками: ");
             array.InsertSort();
             array.Print();

@@ -92,6 +92,19 @@ namespace ArrayLesson
             {
                 SetElementByIndex(index, value);
             }
+        } 
+        public void Swap(ref int i,ref int j)
+        {
+                int temp = i;
+                i = j;
+                j = temp;
+        }
+        public void BubbleSort()
+        {
+            for (int i = 1; i < _array.Length; i++)
+               for (int j = _array.Length-1; j >0; j--)
+                  if (_array[j-1] > _array[j])
+                     Swap(ref _array[j-1],ref _array[j]);
         }
         public void InsertSort()
         {
@@ -146,3 +159,4 @@ namespace ArrayLesson
         }
     }
 }
+
