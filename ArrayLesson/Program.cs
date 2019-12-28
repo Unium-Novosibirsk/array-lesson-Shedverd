@@ -150,9 +150,9 @@ namespace ArrayLesson
                 Console.WriteLine(" ");
             try
             {
-                Console.Write("Введите индекс: ");
+                Console.WriteLine("Введите индекс: ");
                 int b = int.Parse(Console.ReadLine());
-                Console.Write("Ваш эллемент массива: ");
+                Console.WriteLine("Ваш эллемент массива: ");
                 Console.WriteLine(arr[b]);
             }
             catch (IndexOutOfRangeException ex)
@@ -161,21 +161,22 @@ namespace ArrayLesson
                 Console.WriteLine("\n");
                 Console.WriteLine(ex.StackTrace);
             }
-            Console.Write("Сортировка пузырьком: ");
+            Console.WriteLine("Сортировка пузырьком: ");
             array.BubbleSort();
-            Console.Write("Сортировка вставками: ");
+            Console.WriteLine("Сортировка вставками: ");
             array.InsertSort();
             array.Print();
             Console.WriteLine(" ");
-            Console.Write("Введите идекс, который хотите удалить: ");
+            Console.WriteLine("Введите идекс, который хотите удалить: ");
             int index = int.Parse(Console.ReadLine());
             Console.WriteLine("Ваш массив: ");
             array.DeleteElementByIndex(index);
             array.Print();
-            Console.WriteLine("Введите элемент, который хотите добавить");
-            int Element = int.Parse(Console.ReadLine());
-            array.InsertElement(Element);
-            array.Print();
+            Console.WriteLine("Введите элемент, который хотите добавить: ");
+            int InsertValue = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите позицию вставки: ");
+            int InsertPos = int.Parse(Console.ReadLine());
+            array.InsertElement(InsertValue, InsertPos);
             Console.ReadKey();
         }
     }
