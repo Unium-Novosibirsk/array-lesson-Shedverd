@@ -34,10 +34,10 @@ namespace ArrayLesson
             try
             {
 
-                Console.WriteLine("Введите индекс: ");
+                Console.Write("Введите индекс: ");
                 int c = int.Parse(Console.ReadLine());
                 Console.WriteLine("Ваш элемент: " + array.GetElementByIndex(c));
-                Console.WriteLine("\n");
+                Console.WriteLine(" ");
             }
             catch (IndexOutOfRangeException ex)
             {
@@ -176,7 +176,8 @@ namespace ArrayLesson
             int InsertValue = int.Parse(Console.ReadLine());
             Console.WriteLine("Введите позицию вставки: ");
             int InsertPos = int.Parse(Console.ReadLine());
-            array.InsertElement(InsertValue, InsertPos);
+            array.InsertElement(InsertPos, InsertValue);
+            array.Print();
             Console.ReadKey();
         }
     }

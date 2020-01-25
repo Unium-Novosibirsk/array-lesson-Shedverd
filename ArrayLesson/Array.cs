@@ -157,21 +157,21 @@ namespace ArrayLesson
                 }
             }
         }
-        public void InsertElement(int value, int pos)
+        public void InsertElement(int pos, int index)
         {
-            int[] newarr = new int[_array.Length + 1]; 
-            for (int i = 0; i < _array.Length + 1; i++)
+            int[] newArray = new int[_array.Length - 1];
+            for (int i = 0; i < _array.Length; i++)
             {
-                if (i < pos - 1)
-                    newarr[i] = _array[i];
-                else if (i == pos - 1)
-                    newarr[i] = value;
-                else
-                    newarr[i] = _array[i - 1];
+                if (i < index)
+                {
+                    newArray[i] = _array[i];
+                }
+                else if (i > index)
+                {
+                    newArray[i - 1] = _array[i];
+                }
+
             }
-            for (int i = 0; i < _array.Length + 1; i++)
-                Console.Write(newarr[i] + " ");
-            Console.WriteLine();
         }
     }
 }
