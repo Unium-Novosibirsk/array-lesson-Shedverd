@@ -163,14 +163,9 @@ namespace ArrayLesson
             for (int i = 0; i < _array.Length; i++)
             {
                 if (i < index)
-                {
                     newArray[i] = _array[i];
-                }
                 else if (i > index)
-                {
                     newArray[i - 1] = _array[i];
-                }
-
             }
         }
     }
